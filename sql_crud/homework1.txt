@@ -1,10 +1,10 @@
 #point1
 
-CREATE TABLE new_agents
-AS
-SELECT *
-FROM agents
-WHERE WORKING_AREA = "London"
+#CREATE TABLE new_agents
+#AS
+#SELECT *
+#FROM agents
+#WHERE WORKING_AREA = "London"
 
 #point2
 
@@ -15,6 +15,15 @@ WHERE WORKING_AREA = "London"
 #WHERE CUST_COUNTRY = "UK"
 
 #point2 update
+#SELECT *
+#FROM new_agents
+#LEFT JOIN customer ON customer.WORKING_AREA = new_agents.WORKING_AREA
+
+#homework1 update2
+CREATE TABLE new_agents
+AS
 SELECT *
-FROM new_agents
-LEFT JOIN customer ON customer.WORKING_AREA = new_agents.WORKING_AREA
+FROM agents
+LEFT JOIN customer
+ON  customer.WORKING_AREA = new_agents.WORKING_AREA
+WHERE WORKING_AREA = "London"
