@@ -1,0 +1,13 @@
+SELECT
+	agents.WORKING_AREA,
+ 	AVG(commission) AS average_commission, 
+    COUNT(agent_name) AS count_agent_name
+FROM 
+	agents
+GROUP BY 
+	working_area
+HAVING 
+	count_agent_name<3
+ORDER BY
+	average_commission,  
+    count_agent_name DESC
