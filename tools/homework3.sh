@@ -1,1 +1,1 @@
-find . -name "test.txt" | xargs grep 'hello'ls ./test.txt | grep "hello"
+find . -name "test.txt" | xargs grep -o 'character'
