@@ -8,8 +8,13 @@ WHERE WORKING_AREA = "London"
 
 #point2
 
-CREATE TABLE new_customer
-AS
+#CREATE TABLE new_customer
+#AS
+#SELECT *
+#FROM customer
+#WHERE CUST_COUNTRY = "UK"
+
+#point2 update
 SELECT *
-FROM customer
-WHERE CUST_COUNTRY = "UK"
+FROM new_agents
+LEFT JOIN customer ON customer.WORKING_AREA = new_agents.WORKING_AREA
